@@ -17,7 +17,7 @@ Demo: https://trendmicro-frontend.github.io/react-toggle-switch
 2. At this point you can import `@trendmicro/react-toggle-switch` and its styles in your application as follows:
 
   ```js
-  import Switch from '@trendmicro/react-toggle-switch';
+  import ToggleSwitch from '@trendmicro/react-toggle-switch';
 
   // Be sure to include styles at some point, probably during your bootstraping
   import '@trendmicro/react-toggle-switch/dist/react-toggle-switch.css';
