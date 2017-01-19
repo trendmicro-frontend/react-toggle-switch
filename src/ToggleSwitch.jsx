@@ -28,10 +28,16 @@ export default class extends Component {
     actions = {
         handleChange: (event) => {
             event.preventDefault();
-            if (!this.props.disabled) {
-                this.props.onChange && this.props.onChange(event);
-                this.setState({ checked: !this.state.checked });
+
+            if (this.props.disabled) {
+                return;
             }
+
+            if (typeof this.props.onChange === 'function') {
+                this.props.onChange(event);
+            }
+
+            this.setState({ checked: !this.state.checked });
         }
     };
 
