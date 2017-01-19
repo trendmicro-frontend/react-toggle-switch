@@ -25,7 +25,7 @@ Demo: https://trendmicro-frontend.github.io/react-toggle-switch
 
 ## Usage
 
-### Uncontrolled Toggle Switch
+### Uncontrolled Component
 
 ```js
 <ToggleSwitch
@@ -43,7 +43,7 @@ console.log(this.toggleSwitch.checked);
 // => true
 ```
 
-### Controlled Toggle Switch
+### Controlled Component
 
 ```js
 <ToggleSwitch
@@ -89,7 +89,7 @@ console.log(this.toggleSwitch.checked);
     <tr>
       <td>size</td>
       <td>One of:<br>'large'<br>'lg'<br>'small'<br>'sm'</td>
-      <td>lg</td>
+      <td>'lg'</td>
       <td></td>
     </tr>
   </tbody>
