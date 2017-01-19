@@ -21754,10 +21754,16 @@
 	        }, _this.actions = {
 	            handleChange: function handleChange(event) {
 	                event.preventDefault();
-	                if (!_this.props.disabled) {
-	                    _this.props.onChange && _this.props.onChange(event);
-	                    _this.setState({ checked: !_this.state.checked });
+	
+	                if (_this.props.disabled) {
+	                    return;
 	                }
+	
+	                if (typeof _this.props.onChange === 'function') {
+	                    _this.props.onChange(event);
+	                }
+	
+	                _this.setState({ checked: !_this.state.checked });
 	            }
 	        }, _temp), _possibleConstructorReturn(_this, _ret);
 	    }
@@ -22412,4 +22418,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=bundle.js.map?7d8f2015cdd84486da8b
+//# sourceMappingURL=bundle.js.map?07db68b329a08e323edf
