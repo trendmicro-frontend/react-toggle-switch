@@ -21761,6 +21761,7 @@
 	
 	                if (typeof _this.props.onChange === 'function') {
 	                    _this.props.onChange(event);
+	                    return;
 	                }
 	
 	                _this.setState({ checked: !_this.state.checked });
@@ -22069,8 +22070,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js?-autoprefixer&camelCase&modules&importLoaders=1&localIdentName=[hash:base64:5]!./../node_modules/stylus-loader/index.js!./../node_modules/stylint-loader/index.js!./index.styl", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js?-autoprefixer&camelCase&modules&importLoaders=1&localIdentName=[hash:base64:5]!./../node_modules/stylus-loader/index.js!./../node_modules/stylint-loader/index.js!./index.styl");
+			module.hot.accept("!!../node_modules/css-loader/index.js?-autoprefixer&camelCase&modules&importLoaders=1&localIdentName=[hash:base64:5]!../node_modules/stylus-loader/index.js!../node_modules/stylint-loader/index.js!./index.styl", function() {
+				var newContent = require("!!../node_modules/css-loader/index.js?-autoprefixer&camelCase&modules&importLoaders=1&localIdentName=[hash:base64:5]!../node_modules/stylus-loader/index.js!../node_modules/stylint-loader/index.js!./index.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -22181,7 +22182,7 @@
 			};
 		},
 		isOldIE = memoize(function() {
-			return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
+			return /msie [6-9]\b/.test(self.navigator.userAgent.toLowerCase());
 		}),
 		getHeadElement = memoize(function () {
 			return document.head || document.getElementsByTagName("head")[0];
@@ -22418,4 +22419,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=bundle.js.map?07db68b329a08e323edf
+//# sourceMappingURL=bundle.js.map?f6f7a6b2a2bd575c728f

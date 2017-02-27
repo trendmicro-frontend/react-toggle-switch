@@ -35,6 +35,7 @@ export default class extends Component {
 
             if (typeof this.props.onChange === 'function') {
                 this.props.onChange(event);
+                return;
             }
 
             this.setState({ checked: !this.state.checked });
