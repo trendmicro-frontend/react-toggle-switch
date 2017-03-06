@@ -9,7 +9,10 @@
     }
   ],
   "homepage": "https://github.com/trendmicro-frontend/react-toggle-switch",
-  "snapshots": [],
+  "snapshots": [
+    "./snapshots/large.png",
+    "./snapshots/small.png"
+  ],
   "keywords": [
     "react",
     "react-toggle-switch"
