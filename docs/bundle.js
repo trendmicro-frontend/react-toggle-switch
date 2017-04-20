@@ -92,10 +92,6 @@ var _react = __webpack_require__("../node_modules/react/react.js");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactAddonsShallowCompare = __webpack_require__("../node_modules/react-addons-shallow-compare/index.js");
-
-var _reactAddonsShallowCompare2 = _interopRequireDefault(_reactAddonsShallowCompare);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -110,8 +106,8 @@ var isTrivialHref = function isTrivialHref(href) {
     return !href || href.trim() === '#';
 };
 
-var Anchor = (_temp2 = _class = function (_Component) {
-    _inherits(Anchor, _Component);
+var Anchor = (_temp2 = _class = function (_PureComponent) {
+    _inherits(Anchor, _PureComponent);
 
     function Anchor() {
         var _ref;
@@ -149,11 +145,6 @@ var Anchor = (_temp2 = _class = function (_Component) {
     }
 
     _createClass(Anchor, [{
-        key: 'shouldComponentUpdate',
-        value: function shouldComponentUpdate(nextProps, nextState) {
-            return (0, _reactAddonsShallowCompare2.default)(this, nextProps, nextState);
-        }
-    }, {
         key: 'render',
         value: function render() {
             var _props = this.props,
@@ -189,7 +180,7 @@ var Anchor = (_temp2 = _class = function (_Component) {
     }]);
 
     return Anchor;
-}(_react.Component), _class.propTypes = {
+}(_react.PureComponent), _class.propTypes = {
     href: _propTypes2.default.string,
     style: _propTypes2.default.object,
     onClick: _propTypes2.default.func,
@@ -4641,42 +4632,6 @@ if (process.env.NODE_ENV !== 'production') {
 var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 
 module.exports = ReactPropTypesSecret;
-
-
-/***/ }),
-
-/***/ "../node_modules/react-addons-shallow-compare/index.js":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- *
- * @providesModule shallowCompare
- */
-
-
-
-var shallowEqual = __webpack_require__("../node_modules/fbjs/lib/shallowEqual.js");
-
-/**
- * Does a shallow comparison for props and state.
- * See ReactComponentWithPureRenderMixin
- * See also https://facebook.github.io/react/docs/shallow-compare.html
- */
-function shallowCompare(instance, nextProps, nextState) {
-  return (
-    !shallowEqual(instance.props, nextProps) ||
-    !shallowEqual(instance.state, nextState)
-  );
-}
-
-module.exports = shallowCompare;
 
 
 /***/ }),
@@ -25058,7 +25013,6 @@ module.exports = g;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.default = undefined;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -25077,10 +25031,6 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 var _react = __webpack_require__("../node_modules/react/react.js");
 
 var _react2 = _interopRequireDefault(_react);
-
-var _reactAddonsShallowCompare = __webpack_require__("../node_modules/react-addons-shallow-compare/index.js");
-
-var _reactAddonsShallowCompare2 = _interopRequireDefault(_reactAddonsShallowCompare);
 
 var _reactAnchor = __webpack_require__("../node_modules/@trendmicro/react-anchor/lib/index.js");
 
@@ -25102,21 +25052,21 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var _default = (_temp2 = _class = function (_Component) {
-    _inherits(_default, _Component);
+var ToggleSwitch = (_temp2 = _class = function (_PureComponent) {
+    _inherits(ToggleSwitch, _PureComponent);
 
-    function _default() {
+    function ToggleSwitch() {
         var _ref;
 
         var _temp, _this, _ret;
 
-        _classCallCheck(this, _default);
+        _classCallCheck(this, ToggleSwitch);
 
         for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
             args[_key] = arguments[_key];
         }
 
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = _default.__proto__ || Object.getPrototypeOf(_default)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = ToggleSwitch.__proto__ || Object.getPrototypeOf(ToggleSwitch)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
             checked: _this.props.checked
         }, _this.actions = {
             handleChange: function handleChange(event) {
@@ -25136,15 +25086,10 @@ var _default = (_temp2 = _class = function (_Component) {
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
-    _createClass(_default, [{
+    _createClass(ToggleSwitch, [{
         key: 'componentWillReceiveProps',
         value: function componentWillReceiveProps(nextProps) {
             this.setState({ checked: nextProps.checked });
-        }
-    }, {
-        key: 'shouldComponentUpdate',
-        value: function shouldComponentUpdate(nextProps, nextState) {
-            return (0, _reactAddonsShallowCompare2.default)(this, nextProps, nextState);
         }
     }, {
         key: 'render',
@@ -25176,8 +25121,8 @@ var _default = (_temp2 = _class = function (_Component) {
         }
     }]);
 
-    return _default;
-}(_react.Component), _class.propTypes = {
+    return ToggleSwitch;
+}(_react.PureComponent), _class.propTypes = {
     checked: _propTypes2.default.bool,
     disabled: _propTypes2.default.bool,
     onChange: _propTypes2.default.func,
@@ -25187,8 +25132,7 @@ var _default = (_temp2 = _class = function (_Component) {
     disabled: false,
     size: 'lg'
 }, _temp2);
-
-exports.default = _default;
+exports.default = ToggleSwitch;
 
 /***/ }),
 
@@ -25436,4 +25380,4 @@ _reactDom2.default.render(_react2.default.createElement(App, null), document.get
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?a4fea0ef99bc4fe8065c
+//# sourceMappingURL=bundle.js.map?50a8f7de42e177f4ce71

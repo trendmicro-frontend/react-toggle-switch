@@ -1,11 +1,10 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import shallowCompare from 'react-addons-shallow-compare';
+import React, { PureComponent } from 'react';
 import Anchor from '@trendmicro/react-anchor';
 import styles from './index.styl';
 
-export default class extends Component {
+class ToggleSwitch extends PureComponent {
     static propTypes = {
         checked: PropTypes.bool,
         disabled: PropTypes.bool,
@@ -46,9 +45,6 @@ export default class extends Component {
     componentWillReceiveProps(nextProps) {
         this.setState({ checked: nextProps.checked });
     }
-    shouldComponentUpdate(nextProps, nextState) {
-        return shallowCompare(this, nextProps, nextState);
-    }
     get checked() {
         return this.state.checked;
     }
@@ -86,3 +82,5 @@ export default class extends Component {
         );
     }
 }
+
+export default ToggleSwitch;
