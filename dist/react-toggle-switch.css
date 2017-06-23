@@ -1,11 +1,22 @@
-/*! react-toggle-switch v0.5.4 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-toggle-switch */
+/*! react-toggle-switch v0.5.5 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-toggle-switch */
 .toggle-switch---switch---3EchW {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 20px;
   position: relative;
   display: inline-block;
   width: 48px;
   height: 24px;
   margin: 0 8px 0 0;
   vertical-align: middle;
+}
+.toggle-switch---switch---3EchW *,
+.toggle-switch---switch---3EchW *:before,
+.toggle-switch---switch---3EchW *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
 }
 .toggle-switch---switch-sm---31JjY {
   width: 32px;
