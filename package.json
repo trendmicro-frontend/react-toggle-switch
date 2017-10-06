@@ -1,6 +1,6 @@
 {
   "name": "@trendmicro/react-toggle-switch",
-  "version": "0.5.5",
+  "version": "0.5.6",
   "description": "Trend Micro Components: React Toggle Switch",
   "main": "lib/index.js",
   "files": [
