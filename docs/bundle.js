@@ -25089,7 +25089,9 @@ var ToggleSwitch = (_temp2 = _class = function (_PureComponent) {
     _createClass(ToggleSwitch, [{
         key: 'componentWillReceiveProps',
         value: function componentWillReceiveProps(nextProps) {
-            this.setState({ checked: nextProps.checked });
+            if (this.props.checked !== nextProps.checked) {
+                this.setState({ checked: nextProps.checked });
+            }
         }
     }, {
         key: 'render',
@@ -25380,4 +25382,4 @@ _reactDom2.default.render(_react2.default.createElement(App, null), document.get
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?7d3ca7388ef92c70c411
+//# sourceMappingURL=bundle.js.map?c9982463b2dab80375c1
