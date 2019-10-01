@@ -42,11 +42,12 @@ class ToggleSwitch extends PureComponent {
         }
     };
 
-    componentWillReceiveProps(nextProps) {
-        if (this.props.checked !== nextProps.checked) {
-            this.setState({ checked: nextProps.checked });
+    componentDidUpdate(prevProps) {
+        if (prevProps.checked !== this.props.checked) {
+            this.setState({ checked: this.props.checked });
         }
     }
+
     get checked() {
         return this.state.checked;
     }
