@@ -55,11 +55,15 @@ class ToggleSwitch extends PureComponent {
             className,
             disabled,
             size,
+            onColor,
+            offColor,
             ...props
         } = this.props;
 
         delete props.checked;
         delete props.onChange;
+
+        const color = this.state.checked ? onColor : offColor;
 
         return (
             <Anchor
@@ -79,6 +83,7 @@ class ToggleSwitch extends PureComponent {
                         styles.round,
                         { [styles.disabled]: disabled }
                     )}
+                    style={{ backgroundColor: color, borderColor: color }}
                 />
             </Anchor>
         );

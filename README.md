@@ -92,6 +92,18 @@ console.log(this.toggleSwitch.checked);
       <td>'lg'</td>
       <td></td>
     </tr>
+    <tr>
+      <td>onColor</td>
+      <td>string / hex</td>
+      <td>'#ff0000'</td>
+      <td>Color when state is ON</td>
+    </tr>
+    <tr>
+      <td>offColor</td>
+      <td>string / hex</td>
+      <td>'#009000'</td>
+      <td>Color when state is OFF</td>
+    </tr>
   </tbody>
 </table>
 
